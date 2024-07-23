@@ -1,9 +1,9 @@
 import Foundation
 
 // Values are automatically converted to and from Glicko 1 scale (Step 2/step 8)
-struct Player {
+public struct Player {
     internal var glicko2Rating: Double = 0.0
-    var rating: Double {
+    public var rating: Double {
         get {
             return round(((self.glicko2Rating * 173.7178) + 1500) * 1e2) / 1e2
         }
@@ -12,7 +12,7 @@ struct Player {
         }
     }
     internal var glicko2Deviation: Double = 0.0
-    var deviation: Double {
+    public var deviation: Double {
         get {
             return round((self.glicko2Deviation * 173.7178) * 1e2) / 1e2
         }
@@ -21,7 +21,7 @@ struct Player {
         }
     }
     internal var glicko2Volatility: Double = 0.0
-    var volatility: Double {
+    public var volatility: Double {
         get {
             return glicko2Volatility
         }
