@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
-class Glicko2 {
+public class Glicko2 {
     private let system_constant: Double
     private let e: Double
 
